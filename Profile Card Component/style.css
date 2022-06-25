@@ -1,0 +1,146 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --white: white;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--very-dark-desaturated-blue);
+}
+
+h2 {
+    font-size: 0.9em;
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+p {
+    font-size: 0.7em;
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+.container {
+    background: url(images/bg-pattern-bottom.svg) no-repeat left 50vw top 50vh,
+                url(images/bg-pattern-top.svg) no-repeat right 53vw bottom 37vh;
+    background-color: var(--dark-cyan);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 18px;
+    box-shadow: 10px 5px 17px 5px  hsla(185, 76%, 28%, 0.253);
+    box-sizing: border-box;
+    position: relative;
+    width: 350px;
+    height: 375px;
+}
+
+.header-bg {
+    border-radius: 18px 18px 0 0;
+}
+
+.profile {
+    position: relative;
+    transform: translateY(-20%);
+}
+
+.id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.id img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 5px solid var(--white);
+}
+
+.id .name-age {
+    display: flex;
+    flex-direction: row;
+}
+
+.id .name-age .age {
+    color: var(--dark-gray);
+    margin-left: 10px;
+}
+
+hr {
+    margin: 30px 0;
+    opacity: 30%;
+    color: var(--dark-gray);
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.followers, .likes, .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

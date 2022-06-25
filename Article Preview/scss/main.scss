@@ -1,0 +1,147 @@
+@import 'colors';
+@import 'setup';
+
+body {
+    background: $light-grayish-blue;
+    color: $very-dark-grayish-blue;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__image {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 2em;
+
+    &__title {
+        margin: 0 0 1em 0;
+        font-size: 1.7rem;
+    }
+
+    &__body {
+        margin: 0 0 2em 0;
+        font-weight: 500;
+        text-align: justify;
+    }
+
+    &__author {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+
+    &__body {
+        &--name {
+            font-weight: 700;
+            margin: .25em 0;
+        }
+
+        &--date {
+            margin: .25em 0;
+        }
+    }
+
+    &__share {
+        cursor: pointer;
+        z-index: 2;
+
+        .fas {
+            background: $light-grayish-blue;
+            color: $very-dark-grayish-blue;
+            font-size: 1.5em;
+            padding: .5em;
+            border-radius: 50%;
+
+            &:hover {
+                background: $very-dark-grayish-blue;
+                color: $light-grayish-blue;
+            }
+        }
+    }
+}
+
+.bubble {
+    width: 100%;
+    background-color: $very-dark-grayish-blue;
+    opacity: 0;
+    border-radius: 0 0 13px 13px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.6em 0;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+
+    p {
+        color: $light-grayish-blue;
+        letter-spacing: 5px;
+        margin: 0 .5em 0 2em;
+    }
+
+    .fab {
+        margin: 0 .5em;
+        font-size: 2em;
+        color: $light-grayish-blue;   
+    }
+}
+
+.bubbleIn {
+    animation: bubbleFadeIn 0.3s forwards;
+}
+
+.bubbleOut {
+    animation: bubbleFadeOut 0.1s forwards;
+}
+
+@keyframes bubbleFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bubbleFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@import 'responsive';

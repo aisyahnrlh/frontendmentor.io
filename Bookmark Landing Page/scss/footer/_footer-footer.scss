@@ -1,0 +1,85 @@
+@use '../init/variables'as *;
+
+.footer {
+    padding: 2.25rem;
+    background-color: $veryDarkBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 10rem;
+        height: auto;
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            margin-bottom: 0;
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1400px) {
+            max-width: 40%;
+        }
+    }
+
+    &__links>a:not(:last-child) {
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__link:hover {
+        color: $softRed;
+    }
+
+    &__socmed {
+        display: flex;
+        align-items: center;
+    }
+
+    &__socmed>a:first-child>svg {
+        margin-right: 3rem;
+    }
+
+    &__socmed>a>svg>path {
+        transition: all .3s ease-in-out;
+    }
+
+    &__socmed>a:hover>svg>path {
+        fill: $softRed;
+    }
+}

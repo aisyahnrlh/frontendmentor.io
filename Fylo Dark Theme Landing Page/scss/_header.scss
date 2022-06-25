@@ -1,0 +1,53 @@
+header {
+    background-color: $darkBlueIntro;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+
+    @include breakpoints-up(large) {
+        padding-top: rem(50);
+        padding-bottom: rem(50);
+    }
+
+    &__logo {
+        height: rem(24);
+
+        &-image {
+            width: rem(83);
+            height: 100%;
+        }
+    }
+
+    &__links {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoints-up(medium) {
+            width: 40%;
+        }
+
+        @include breakpoints-up(large) {
+            width: 30%;
+        }
+
+        @include breakpoints-up(xlarge) {
+            width: 20%;
+        }
+    }
+
+    &__item {
+        text-decoration: none;
+
+        &:hover {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}

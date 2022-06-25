@@ -1,0 +1,64 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    color: $white;
+}
+
+//typograhy
+h1 {
+    font-size: rem(25);
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include breakpoints-up(xlarge) {
+        font-size: rem(42);
+    }
+}
+
+h2 {
+    font-size: rem(18);
+    font-weight: 700;
+
+    @include breakpoints-up(xlarge) {
+        font-size: rem(40);
+    }
+}
+
+a,
+p {
+    font-size: rem(14);
+    line-height: 1.5;
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    background-color: $blue;
+    color: $white;
+    font-size: rem(14);
+    font-weight: 700;
+    border: none;
+    padding: rem(17);
+    border-radius: 30px;
+
+    &:hover {
+        background-color: $cyan;
+    }
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 30px;
+    padding: rem(17);
+}
+
+.container {
+    padding-left: rem(25);
+    padding-right: rem(25);
+
+    @include breakpoints-up(xlarge) {
+        padding-left: rem(75);
+        padding-right: rem(75);
+    }
+}

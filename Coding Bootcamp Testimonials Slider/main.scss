@@ -1,0 +1,195 @@
+$dark-blue: hsl(240, 38%, 20%);
+$grayish-blue: hsl(240, 18%, 77%);
+
+$font-weight: ("light": 300,
+    "medium": 500,
+    "bold": 700);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/pattern-curve.svg) no-repeat left bottom fixed;
+    position: relative;
+
+    @media (max-width: 576px) {
+        background-size: 400px;
+    }
+
+    @media (max-width: 376px) {
+        background-size: 300px;
+    }
+}
+
+@mixin arrow ($tl, $tr, $bl, $br) {
+    padding: 10px 20px;
+    background-color: white;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-top-left-radius: $tl;
+    border-bottom-left-radius: $bl;
+    cursor: pointer;
+
+    @media (max-width: 576px) {
+        font-size: 0.5rem;
+        padding: 10px 15px;
+    }
+}
+
+.review {
+    width: 1200px;
+    height: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: 576px) {
+        width: 350px;
+        height: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img {
+        .pattern-bg {
+            position: absolute;
+            bottom: -10%;
+            right: -6%;
+
+            @media (max-width: 576px) {
+                width: 350px;
+                top: 0;
+                left: 0;
+            }
+
+            // transform: translate(-50%, -5%);
+        }
+
+        .profile-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: fade 1.5s forwards;
+
+            @media (max-width: 576px) {
+                right: 10%;
+                top: 3%;
+            }
+
+            .profile-pic {
+                border-radius: 5px;
+                box-shadow: 20px 30px 30px rgba($color: #292929, $alpha: 0.1);
+
+                @media (max-width: 576px) {
+                    width: 280px;
+                }
+            }
+        }
+
+        .arrow {
+            color: $grayish-blue;
+            position: absolute;
+            bottom: -5%;
+            right: 30%;
+
+            @media (max-width: 576px) {
+                top: 39%;
+                right: 38.3%;
+            }
+
+            .prev {
+                @include arrow(30px, 0, 30px, 0);
+            }
+
+            .next {
+                @include arrow(0, 30px, 0, 30px);
+            }
+
+            :hover {
+                color: $dark-blue;
+            }
+        }
+    }
+
+    .pattern-quotes {
+        position: absolute;
+        top: 20%;
+        left: 16%;
+
+        @media (max-width: 576px) {
+            width: 70px;
+            top: 59%;
+            left: 43%;
+        }
+    }
+
+    .quotes {
+        position: absolute;
+        top: 34%;
+        left: 8%;
+        width: 650px;
+        animation: fade 0.5s forwards;
+
+        @media (max-width: 576px) {
+            top: 65%;
+            left: 0;
+            width: 350px;
+        }
+
+
+        .quote {
+            font-weight: map-get($font-weight, "light");
+            color: $dark-blue;
+            margin-bottom: 50px;
+
+            @media (max-width: 576px) {
+                font-size: 0.61rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        .id {
+            color: $dark-blue;
+            display: flex;
+            font-size: 0.5rem;
+            margin-right: 10px;
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+                margin: 0;
+                align-items: center;
+            }
+
+            .name {
+                margin-right: 10px;
+                font-weight: map-get($font-weight, "bold");
+            }
+
+            .jobs {
+                font-weight: map-get($font-weight, "light");
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}

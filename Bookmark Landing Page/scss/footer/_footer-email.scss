@@ -1,0 +1,126 @@
+@use '../init/variables'as *;
+
+.email {
+    padding: 1.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $softBlue;
+
+    @media screen and (min-width: 768px) {
+        padding: 5rem 0;
+    }
+
+    &__text {
+        font-size: 0.8rem;
+        letter-spacing: 5px;
+        color: white;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: map-get($fontWeight, "medium");
+        color: white;
+        margin-bottom: 1.25rem;
+        max-width: 20rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 1.375rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .no-error {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .error {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5625rem;
+        position: relative;
+    }
+
+    .error::after {
+        content: "Whoops! make sure it's email";
+        font-style: italic;
+        font-size: 0.8rem;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        background-color: $softRed;
+        color: white;
+        padding: 0.2rem 0;
+        display: block;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 20rem;
+            bottom: -18px;
+        }
+    }
+
+    input {
+        flex: 1;
+        box-sizing: border-box;
+        padding: 0.5625rem 0.75rem;
+        border-radius: 3px;
+        border: 1px solid $softRed;
+        color: $veryDarkBlue;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        position: relative;
+        margin-bottom: 0.5rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+            margin-right: 0.625rem;
+            width: 20rem;
+        }
+    }
+
+    .no-error__img {
+        display: none;
+    }
+
+    .error__img {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        opacity: 1;
+
+        @media screen and (min-width: 768px) {
+            right: 20px;
+        }
+    }
+
+    p#log {
+        font-size: 0.8rem;
+        font-weight: map-get($fontWeight, "medium");
+        color: white;
+    }
+}

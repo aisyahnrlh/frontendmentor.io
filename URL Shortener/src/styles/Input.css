@@ -1,0 +1,181 @@
+@import "./variables.css";
+
+section.input__container {
+    padding: 2rem 6rem;
+    background-image: linear-gradient(to bottom, var(--white) 50%, #F0F1F6 50%);
+}
+
+.input {
+    background: url('../images/bg-shorten-desktop.svg'), var(--dark-violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-position: center;
+    position: relative;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+
+input.success {
+    border: 3px solid transparent;
+}
+
+input.danger {
+    border: 3px solid var(--red);
+    color: var(--red);
+}
+
+.input p {
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    left: 2rem;
+    color: var(--red);
+}
+
+button {
+    padding: 0.5rem 2rem;
+    border: none;
+    font-weight: 700;
+    color: var(--white);
+    border-radius: 5px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.cyan {
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+
+button.cyan:hover {
+    background-color: var(--cyan-hover);
+}
+
+button.purple {
+    background-color: var(--dark-violet);
+    cursor: default;
+}
+
+button.disabled {
+    background-color: var(--cyan-hover);
+}
+
+.input input {
+    flex: 0.95;
+}
+
+.url {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.url p {
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.url__short {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.5;
+    align-items: center;
+}
+
+.url__short input {
+    font-size: 18px;
+}
+
+.url__short input:disabled {
+    background-color: var(--white);
+    color: var(--cyan);
+    width: 250px;
+}
+
+.url__short p {
+    color: var(--cyan);
+    margin-right: 2rem;
+}
+
+.loading {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    section.input__container {
+        padding: 2rem 1.5rem;
+    }
+
+    .input {
+        flex-direction: column;
+        background: url('../images/bg-shorten-mobile.svg'), var(--dark-violet);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    input {
+        margin-bottom: 1rem;
+    }
+
+    .url {
+        flex-direction: column;
+    }
+
+    .url p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .url hr {
+        width: 100%;
+        opacity: 0.2;
+        margin: 0.75rem 0;
+    }
+
+    .url__short {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .url__short input:disabled {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 16px;
+    }
+
+    .url__short button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .url hr {
+        display: none;
+    }
+}

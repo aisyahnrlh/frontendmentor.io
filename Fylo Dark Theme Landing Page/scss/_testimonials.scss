@@ -1,0 +1,77 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(70);
+    padding-right: rem(46);
+    padding-bottom: rem(250);
+    padding-left: rem(46);
+    background-color: $darkBlueMain;
+
+    @include breakpoints-up(xlarge) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+    }
+
+    &__quote {
+        width: rem(24);
+        height: rem(17);
+
+        @include breakpoints-up(xlarge) {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            transform: translate(-10%, -10%) scale(3);
+            z-index: 0;
+        }
+    }
+}
+
+.testimonial {
+    z-index: 1;
+    padding: rem(30) rem(20) rem(25) rem(20);
+    background-color: $darkBlueTestimonials;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.1);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @include breakpoints-up(xlarge) {
+        max-width: rem(300);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: rem(25);
+
+        @include breakpoints-up(xlarge) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        margin-bottom: rem(23);
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        width: rem(25);
+        height: rem(25);
+        margin-right: rem(10);
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: rem(10);
+    }
+
+    &__jobs {
+        font-size: rem(10);
+    }
+}

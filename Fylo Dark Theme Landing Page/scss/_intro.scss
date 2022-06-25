@@ -1,0 +1,72 @@
+.intro {
+    background: url('images/bg-curvy-mobile.svg') center bottom rem(340) no-repeat;
+    background-size: contain;
+    background-color: $darkBlueIntro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: rem(24);
+    padding-bottom: rem(66);
+    position: relative;
+    z-index: 1;
+
+    @include breakpoints-up(large) {
+        background: url('images/bg-curvy-desktop.svg') center bottom no-repeat;
+        background-size: contain;
+        background-color: $darkBlueIntro;
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 51%;
+        z-index: -1;
+        background-color: $darkBlueMain;
+
+        @include breakpoints-up(large) {
+            height: 0%;
+        }
+    }
+
+    &__image {
+        background: url('images/illustration-intro.png');
+        margin-bottom: rem(45);
+        width: 90%;
+        height: 60vw;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include breakpoints-up(large) {
+            max-width: rem(710);
+            max-height: rem(540);
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(25);
+
+        @include breakpoints-up(large) {
+            max-width: rem(500);
+        }
+    }
+
+    &__body {
+        font-size: rem(16);
+        margin-bottom: rem(33);
+
+        @include breakpoints-up(large) {
+            max-width: rem(500);
+        }
+    }
+
+    &__button {
+        width: rem(240);
+        align-self: center;
+        cursor: pointer;
+    }
+}

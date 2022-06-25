@@ -1,0 +1,113 @@
+// cd D:\frontendmentor.io\Bookmark Landing Page
+// sass --watch scss/main.scss css/style.css
+
+@use './init/reset.scss';
+@use './init/variables.scss'as *;
+@use './navbar/navbar.scss';
+@use './hero/hero.scss';
+@use './features/features';
+@use './download/download';
+@use './faq/faq';
+@use './footer/footer-email';
+@use './footer/footer-footer';
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.125rem;
+}
+
+button,
+input[type="text"] {
+    font-family: 'Rubik', sans-serif;
+    font-size: .9rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: map-get($fontWeight, "medium");
+    color: $veryDarkBlue;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    line-height: 1.75;
+    color: $grayishBlue;
+    font-size: 1.0625rem;
+}
+
+li {
+    font-size: 0.9rem;
+}
+
+.btn-red,
+.btn-blue,
+.btn-gray {
+    padding: 0.5625rem 0.7rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: map-get($fontWeight, "medium");
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transition: all .3s ease-out;
+
+    @media (min-width: 768px) {
+        max-width: 12rem;
+    }
+}
+
+.btn-red {
+    border: 1px solid $softRed;
+    background-color: $softRed;
+    color: white;
+}
+
+.btn-red:hover {
+    border: 1px solid $softRed;
+    background-color: white;
+    color: $softRed;
+}
+
+.btn-blue {
+    border: 1px solid $softBlue;
+    background-color: $softBlue;
+    color: white;
+}
+
+.btn-blue:hover {
+    border: 1px solid $softBlue;
+    background-color: white;
+    color: $softBlue;
+}
+
+.btn-gray {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(230, 230, 230);
+    color: $veryDarkBlue;
+}
+
+.btn-gray:hover {
+    background-color: white;
+    border: 1px solid rgb(230, 230, 230);
+    color: $veryDarkBlue;
+}
+
+main {
+    z-index: 0;
+}

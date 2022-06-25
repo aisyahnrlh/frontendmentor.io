@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ accordion card</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="accordions">
+                <img src="images/illustration-box-desktop.svg" alt="" class="box-desktop">
+                <img class="img-mobile" src="images/illustration-woman-online-mobile.svg" alt="">
+                <h1>FAQ</h1>
+                <div class="accordion">
+                    <input type="radio" name="question" id="question1">
+                    <label for="question1">How many team members can I invite?</label>
+                    <div class="answer">
+                        You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+                    </div>
+                </div>
+                <hr>
+                <div class="accordion">
+                    <input type="radio" name="question" id="question2">
+                    <label for="question2">What is the maximum file upload size?</label>
+                    <div class="answer">
+                        No more than 2GB. All files in your account must fit your allocated storage space.
+                    </div>
+                </div>
+                <hr>
+                <div class="accordion">
+                    <input type="radio" name="question" id="question3">
+                    <label for="question3">How do I reset my password?</label>
+                    <div class="answer">
+                        Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+                    </div>
+                </div>
+                <hr>
+                <div class="accordion">
+                    <input type="radio" name="question" id="question4">
+                    <label for="question4">Can I cancel my subscription?</label>
+                    <div class="answer">
+                        Yes! Send us a message and we’ll process your request no questions asked.
+                    </div>
+                </div>
+                <hr>
+                <div class="accordion">
+                    <input type="radio" name="question" id="question5">
+                    <label for="question5">Do you provide additional support?</label>
+                    <div class="answer">
+                        Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        const questions = document.querySelectorAll('.question');
+        const answers = document.querySelectorAll('.answer');
+        questions.forEach(function(e, i) {
+            e.addEventListener('click', function() {
+                if (answers[i].style.display === 'block') {
+                    answers[i].style.display = 'none';
+                } else {
+                    answers[i].style.display = 'block';
+                }
+                e.classList.toggle('active');
+            })
+        })
+    </script> -->
+</body>
+
+</html>

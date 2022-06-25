@@ -1,0 +1,32 @@
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: rem(66);
+    padding-bottom: rem(80);
+    gap: rem(85);
+    background-color: $darkBlueMain;
+
+    @include breakpoints-up(xlarge) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(100);
+    }
+}
+
+.feature {
+    text-align: center;
+
+    @include breakpoints-up(xlarge) {
+        max-width: rem(385);
+        justify-self: center;
+    }
+
+    &__image {
+        transform: scale(0.8);
+        margin-bottom: rem(37);
+    }
+
+    &__title {
+        margin-bottom: rem(15);
+        font-size: rem(20);
+    }
+}

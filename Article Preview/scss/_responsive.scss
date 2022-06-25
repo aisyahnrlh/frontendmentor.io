@@ -1,0 +1,61 @@
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+
+        &__image {
+            width: 45%;
+            border-radius: 20px 0 0 20px;
+            object-position: left;
+        }
+    }
+
+    .article {
+        width: 100%;
+        margin: 0;
+        padding: 2em;
+    }
+
+    .bubble {
+        width: 38%;
+        opacity: 0;
+        border-radius: 13px;
+        justify-content: center;
+        padding: .5em 0;
+        bottom: 25%;
+        right: -12.5%;
+
+        &::before {
+            // layout
+            content: '';
+            position: absolute;
+            bottom: -.5em;
+            border: .75rem solid transparent;
+            border-bottom: none;
+            border-top-color: #48556a;
+            bottom: -9px;
+        
+            // looks
+            border-bottom-color: $very-dark-grayish-blue;
+        }
+    
+        p {
+            color: $light-grayish-blue;
+            letter-spacing: 5px;
+            margin: 0 .5em;
+        }
+    
+        .fab {
+            margin: 0 .5em;
+            font-size: 2em;
+            color: $light-grayish-blue;   
+        }
+    }
+
+    .bubbleIn {
+        animation: bubbleFadeIn 0.2s forwards;
+    }
+
+    .bubbleOut {
+        animation: bubbleFadeOut 0.2s forwards;
+    }
+}

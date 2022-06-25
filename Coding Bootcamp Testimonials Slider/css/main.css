@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: url(images/pattern-curve.svg) no-repeat left bottom fixed;
+  position: relative;
+}
+@media (max-width: 576px) {
+  .container {
+    background-size: 400px;
+  }
+}
+@media (max-width: 376px) {
+  .container {
+    background-size: 300px;
+  }
+}
+
+.review {
+  width: 1200px;
+  height: 540px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 576px) {
+  .review {
+    width: 350px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.review .img .pattern-bg {
+  position: absolute;
+  bottom: -10%;
+  right: -6%;
+}
+@media (max-width: 576px) {
+  .review .img .pattern-bg {
+    width: 350px;
+    top: 0;
+    left: 0;
+  }
+}
+.review .img .profile-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: fade 1.5s forwards;
+}
+@media (max-width: 576px) {
+  .review .img .profile-image {
+    right: 10%;
+    top: 3%;
+  }
+}
+.review .img .profile-image .profile-pic {
+  border-radius: 5px;
+  box-shadow: 20px 30px 30px rgba(41, 41, 41, 0.1);
+}
+@media (max-width: 576px) {
+  .review .img .profile-image .profile-pic {
+    width: 280px;
+  }
+}
+.review .img .arrow {
+  color: #babacf;
+  position: absolute;
+  bottom: -5%;
+  right: 30%;
+}
+@media (max-width: 576px) {
+  .review .img .arrow {
+    top: 39%;
+    right: 38.3%;
+  }
+}
+.review .img .arrow .prev {
+  padding: 10px 20px;
+  background-color: white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .review .img .arrow .prev {
+    font-size: 0.5rem;
+    padding: 10px 15px;
+  }
+}
+.review .img .arrow .next {
+  padding: 10px 20px;
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .review .img .arrow .next {
+    font-size: 0.5rem;
+    padding: 10px 15px;
+  }
+}
+.review .img .arrow :hover {
+  color: #202046;
+}
+.review .pattern-quotes {
+  position: absolute;
+  top: 20%;
+  left: 16%;
+}
+@media (max-width: 576px) {
+  .review .pattern-quotes {
+    width: 70px;
+    top: 59%;
+    left: 43%;
+  }
+}
+.review .quotes {
+  position: absolute;
+  top: 34%;
+  left: 8%;
+  width: 650px;
+  animation: fade 0.5s forwards;
+}
+@media (max-width: 576px) {
+  .review .quotes {
+    top: 65%;
+    left: 0;
+    width: 350px;
+  }
+}
+.review .quotes .quote {
+  font-weight: 300;
+  color: #202046;
+  margin-bottom: 50px;
+}
+@media (max-width: 576px) {
+  .review .quotes .quote {
+    font-size: 0.61rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.review .quotes .id {
+  color: #202046;
+  display: flex;
+  font-size: 0.5rem;
+  margin-right: 10px;
+}
+@media (max-width: 576px) {
+  .review .quotes .id {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
+}
+.review .quotes .id .name {
+  margin-right: 10px;
+  font-weight: 700;
+}
+.review .quotes .id .jobs {
+  font-weight: 300;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
